@@ -1,0 +1,62 @@
+/* Общая сетка: слева колонка, справа контент */
+.shell {
+  display: flex;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 16px;
+  border: 2px solid #111; /* внешняя рамка как на схеме */
+}
+
+.menu {
+  width: 280px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.logo {
+  margin: 0 0 16px 0;
+  font-size: 20px;
+}
+
+/* Список кнопок слева — простые прямоугольники */
+.nav a {
+  display: block;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 2px solid #111;
+  text-decoration: none;
+  color: #111;
+}
+
+.nav a.active {
+  outline: 2px solid red; /* подсветка активного пункта */
+  outline-offset: 2px;
+}
+
+.nav a.disabled {
+  opacity: 0.5;
+  pointer-events: none; /* клик выключен */
+}
+
+.debug button {
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+/* Правая часть */
+.content {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* «Окно» справа с красной закруглённой рамкой */
+.panel {
+  width: 100%;
+  border: 3px solid red;
+  border-radius: 24px;
+  padding: 24px;
+  box-sizing: border-box;
+}
